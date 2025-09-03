@@ -23,8 +23,13 @@ export const createAuth = (ctx: GenericCtx) =>
 			// The Convex plugin is required
 			convex(),
 		],
-		trustedOrigins: ["http://localhost:3000", "https://convex-betterauth-eta.vercel.app", "https://convex-betterauth-tanstack.vercel.app"],
+		trustedOrigins: [
+			"http://localhost:3000",
+			"https://convex-betterauth-eta.vercel.app",
+			"https://convex-betterauth-tanstack.vercel.app",
+			"https://convex-betterauth-tanstack-query.vercel.app",
+		],
 		advanced: {
-			useSecureCookies: process.env.NODE_ENV === "producstion",
+			useSecureCookies: process.env.NODE_ENV === "production",
 		},
 	});
